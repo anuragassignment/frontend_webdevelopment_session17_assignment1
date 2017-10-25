@@ -1,0 +1,21 @@
+<section class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">as used to store value of index</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <!-- code which shows use of “as” keyword -->
+        <li class="list-group-item" *ngFor="let event of collection; index as i">{{event.event}} has an index of {{i}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">*ngIf-else example</div>
+    <div class="panel-body">
+      <!-- code which shows use of ngIf-else introduced in Angular 4 -->
+      <p *ngIf="collection.length === 0; else events">There are no events</p>
+      <ng-template #events>No of events are {{collection.length}}</ng-template>
+    </div>
+  </div>
+</section>
